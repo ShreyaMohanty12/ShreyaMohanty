@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Mohanty - System Log</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using Roboto Mono for the terminal aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #111827; /* Dark Slate Gray (Tailwind gray-900) */
+            --text-color: #e5e7eb; /* Light Gray */
+            --accent-color: #06b6d4; /* Deep Cyan (Tailwind cyan-600) for strong elements */
+            --light-accent-color: #22d3ee; /* Lighter Cyan (Tailwind cyan-400) for text */
+            --border-color: #4b5563; /* Medium Gray for Borders */
+        }
+        body {
+            font-family: 'Roboto Mono', monospace; /* Monospace font for developer/terminal feel */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        /* Style for main sections (replacing shadows and rounded corners) */
+        .section-box {
+            border: 1px solid var(--border-color);
+            background-color: #1f2937; /* Slightly lighter dark background for contrast */
+            /* Subtle cyan glow */
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3); 
+        }
+        /* Custom section header look */
+        .section-header {
+            color: var(--accent-color);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        /* Hover effect for project cards */
+        .card-link:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            /* Stronger cyan glow on hover */
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+        }
+        /* Custom scrollbar for uniqueness */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-200">
+
+    <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header / Hero Section (Terminal Prompt Style) -->
+        <header class="section-box p-6 md:p-10 mb-8 md:mb-12 border-4 border-dashed border-cyan-600">
+            
+            <!-- Traffic light buttons for terminal window effect -->
+            <div class="flex items-center space-x-4 mb-6">
+                <div class="w-4 h-4 rounded-full bg-red-500"></div>
+                <div class="w-4 h-4 rounded-full bg-yellow-500"></div>
+                <div class="w-4 h-4 rounded-full bg-cyan-600"></div>
+            </div>
+
+            <!-- Profile Image (Placeholder - stylized as a low-res scan) -->
+            <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-10">
+                <div class="flex-shrink-0 border-4 border-solid border-cyan-600 p-2">
+                    <img 
+                        src="https://placehold.co/150x150/06b6d4/111827?text=ACCESS+GRANTED" 
+                        alt="Shreya Mohanty System Profile"
+                        class="w-36 h-36 object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/150x150/06b6d4/111827?text=ERROR';"
+                    >
+                </div>
+
+                <!-- Profile Info -->
+                <div class="flex-grow text-center md:text-left">
+                    <pre class="text-xl md:text-2xl font-bold text-cyan-400 mb-2 whitespace-pre-wrap">
+> Running user_profile --id=SHREYA_MOHANTY
+                    </pre>
+                    <h1 class="text-4xl font-extrabold tracking-tight text-white mb-1">SHREYA MOHANTY</h1>
+                    <h2 class="text-xl font-semibold text-cyan-400 mb-3">// SOFTWARE DEVELOPMENT ENGINEER</h2>
+                    <p class="text-gray-400 max-w-3xl mx-auto md:mx-0 text-sm">
+                        [LOG] Passionate about building scalable, efficient, and user-focused software solutions.
+Constantly exploring new technologies to create meaningful digital experiences.
+                    </p>
+                    
+                    <!-- Contact Links -->
+                    <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-6 text-sm font-bold">
+                        <a href="mohantyshreya06@gmail.com" class="text-cyan-400 hover:text-white transition duration-150 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            EMAIL
+                        </a>
+                        <a href="https://www.linkedin.com/in/shreya-mohanty-5b7783201/" target="_blank" class="text-cyan-400 hover:text-white transition duration-150 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.3 3H3.7A.7.7 0 003 3.7v12.6A.7.7 0 003.7 17h12.6a.7.7 0 00.7-.7V3.7a.7.7 0 00-.7-.7zM6.5 15h-2V7h2v8zm-1-9.5A1.5 1.5 0 116 4.5 1.5 1.5 0 015.5 5.5zM15 15h-2v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2V15h-2V7h2v1.5a4.2 4.2 0 014.5-2.5c2.4 0 4.5 2.1 4.5 4.5V15z" clip-rule="evenodd"/></svg>
+                            LINKEDIN
+                        </a>
+                        <a href="https://github.com/janedoe" target="_blank" class="text-cyan-400 hover:text-white transition duration-150 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 0c-6.626 0-12 5.374-12 12 0 5.385 3.5 9.947 8.244 11.599.6.111.82-.266.82-.596 0-.293-.01-1.077-.01-2.071-3.593.782-4.346-1.72-4.346-1.72-.584-1.48-1.424-1.87-1.424-1.87-1.168-.797.088-.78.088-.78 1.293.09 1.97 1.332 1.97 1.332 1.15 1.968 3.012 1.401 3.737 1.076.117-.835.452-1.401.824-1.722-2.857-.32-5.864-1.428-5.864-6.335 0-1.403.498-2.553 1.314-3.454-.131-.322-.573-1.631.124-3.401 0 0 1.037-.354 3.4-.648 1.074-.294 2.174-.441 3.274-.441 1.1 0 2.2.147 3.274.441 2.363.294 3.4 0 3.4.648.697 1.77.255 3.079.124 3.401.816.901 1.314 2.051 1.314 3.454 0 4.921-3.007 6.015-5.875 6.326.463.398.877 1.18.877 2.378 0 1.721-.015 3.102-.015 3.522 0 .33.218.706.829.588C20.5 22.022 24 17.38 24 12c0-6.626-5.374-12-12-12z" clip-rule="evenodd"/></svg>
+                            GITHUB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Column 1 & 2 (Skills, Experience) -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Skills Section -->
+                <section class="section-box p-6 md:p-8">
+                    <h3 class="section-header text-2xl">SKILLS_MATRIX</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <!-- Skill Chip Template - High contrast border/text -->
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">React.js</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">TypeScript</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">HTML</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">Tailwind CSS</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">Java Script</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">Node.js / Express</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">AWS</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">C++</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">Java</div>
+                        <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">Python</div>
+                         <div class="bg-gray-800 border border-cyan-600 text-cyan-400 font-medium py-2 px-4 text-center text-sm shadow-md hover:bg-gray-700 transition duration-150">MongoDB</div>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="section-box p-6 md:p-8">
+                    <h3 class="section-header text-2xl">WORK_HISTORY</h3>
+                    
+                    <ol class="relative border-l border-gray-600 ml-4">                  
+                        <!-- Job 1 -->
+                        <li class="mb-8 ml-6">
+                            <!-- Timeline dot in cyan -->
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-cyan-600 -left-[7px] ring-4 ring-gray-900"></span>
+                            <h4 class="flex items-center mb-1 text-xl font-bold text-white">// Amazon [SOFTWARE DEVELOPMENT ENGINEER]</h4>
+                            <time class="block mb-2 text-sm font-light leading-none text-gray-400">DURATION: 2024-08-01 -> PRESENT</time>
+                            <p class="text-base text-gray-300">COD (CashOnDelivery) settlement stuck workflows resolution.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                                <li>Conducted root-cause analysis of stuck refund reconciliation workflows in COD Payment processor</li>
+                                <li>Fixed multiple settlement issues, reducing stuck COD refunds from 12/day to 3-4/day, improving customer trust and operational efficiency.</li>
+                            </ul>
+                            <p class="text-base text-gray-300">Rabbit App – Delivery Agent Experience Enhancement.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                                 <li>Collaborated cross-functionally to implement feature in Rabbit App, app used by Delivery Agents to fix the amount
+                         displayed on screen for pre-paid (paid using PayNow feature) COD orders with validation by one-ground testing.</li>
+<li>This resolved delivery agent confusion, reduced friction, and improved on-ground operational efficiency.</li>
+
+                            </ul>
+                            <p class="text-base text-gray-300">COD Suppression Messaging on PSP (Payment Selection Page).</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                                <li>Customers may have their COD option for payment disabled for multiple reasons, with limited visibility or communication around the specific cause.</li>
+                                <li>Implemented custom messaging / BottomSheet UI component on the Payment Selection Page (PSP) to display specific messaging when COD is disabled due to incomplete address details, enabling customers to self-correct, restore COD eligibility, and improve satisfaction.</li>
+
+                            </ul>
+                            <p class="text-base text-gray-300">Service Migration from DUB to ZAZ region.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                            <li>Designed and implemented complex migration of backend and frontend payment services from DUB (Ireland) to ZAZ
+(Spain) as part of an org-wide initiative to minimize DUB footprint.</li>
+                            <li>Designed approaches for seamless migration with minimal service disruption and latency optimization.</li>
+                            </ul>
+
+                            <p class="text-base text-gray-300">CI/CD Automation.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                            <li>Built an end-to-end Integration Test package from scratch for a core pipeline, automating critical test scenarios to
+enhance deployment reliability, reduce manual intervention, and boost developer productivity.</li>
+                            </ul>
+
+                            <p class="text-base text-gray-300">AWS Cost optimization.</p>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-400 space-y-1 ml-4">
+                            <li>Analyzed AWS cost drivers for a backend service and implemented architectural/configuration optimizations, reducing
+AWS utilization by 50% and improving fleet credit score from 60 to 80+.</li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Job 2 -->
+                        <li class="mb-8 ml-6">
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-cyan-600 -left-[7px] ring-4 ring-gray-900"></span>
+                            <h4 class="mb-1 text-xl font-bold text-white">// Amazon [SOFTWARE DEVELOPMENT ENGINEER INTERN]</h4>
+                            <time class="block mb-2 text-sm font-light leading-none text-gray-400">DURATION: 2023-05-01 -> 2023-07-31</time>
+                            <p class="text-base text-gray-300">STATUS: Worked on a project to write integration tests using Chameleon framework to mock dependencies. Frameworks used: TestNG, JUnit, Fugue, Mockito Worked on bug fixing that were deployed in production level. Understood how an end-to-end SDLC is executed in software industry.</p>
+                        </li>        
+                    </ol>
+                </section>
+            </div>
+            
+            <!-- Column 3 (Projects & Certifications) -->
+            <div class="lg:col-span-1 space-y-8">
+
+                <!-- Projects Section -->
+                <section class="section-box p-6 md:p-8">
+                    <h3 class="section-header text-2xl">POR_LOG</h3>
+
+                    <div class="space-y-4">
+                        <!-- Project Card 1 - Uses card-link class for custom hover effect -->
+                        <a href="#project-1" class="card-link block p-4 bg-gray-800 border-2 border-gray-600 hover:border-cyan-600 transition duration-200">
+                            <h4 class="text-lg font-semibold text-cyan-400">Wissenaire Fest, Techno-management fest of IIT-BBS</h4>
+                            <div class="flex flex-wrap mt-2 gap-2">
+                                <span class="text-xs bg-gray-700 text-cyan-400 border border-cyan-600 px-2 py-0.5">Core head of Events and Management team.</span>
+                                <span class="text-xs bg-gray-700 text-cyan-400 border border-cyan-600 px-2 py-0.5">Fest events planning and execution.</span>
+                                <span class="text-xs bg-gray-700 text-cyan-400 border border-cyan-600 px-2 py-0.5">Organizing TEDX events and various workshops.</span>
+                            </div>
+                        </a>
+
+                        <!-- Project Card 2 -->
+                        <a href="#project-2" class="card-link block p-4 bg-gray-800 border-2 border-gray-600 hover:border-cyan-600 transition duration-200">
+                            <h4 class="text-lg font-semibold text-cyan-400">Counseling Service Team (CST), IIT-BBS</h4>
+                            <p class="text-sm text-gray-400 mt-1">Senior Guide in CST</p>
+                            <div class="flex flex-wrap mt-2 gap-2">
+                                <span class="text-xs bg-gray-700 text-cyan-400 border border-cyan-600 px-2 py-0.5">CST facilitates the personal, academic, professional, and social growth of students at IIT-BBS.</span>
+                                <span class="text-xs bg-gray-700 text-cyan-400 border border-cyan-600 px-2 py-0.5">The team creates a haven for students to discuss issues and challenges in a friendly, yet secure environment.</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Project Card 3 -->
+                    </div>
+                </section>
+                
+                <!-- Certifications Section -->
+                <section class="section-box p-6 md:p-8">
+                    <h3 class="section-header text-2xl">CERTIFICATION_ACCESS</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 font-medium flex items-start text-sm">
+                            <span class="text-cyan-400 mr-2 font-bold">[V]</span>
+                            <span class="flex-1">
+                                AWS Certified Solutions Architect - Associate 
+                                <span class="block text-xs font-light text-gray-500">(DATE: 2023)</span>
+                            </span>
+                        </li>
+                        <li class="text-gray-300 font-medium flex items-start text-sm">
+                            <span class="text-cyan-400 mr-2 font-bold">[V]</span>
+                            <span class="flex-1">
+                                Professional Scrum Master I (PSM I)
+                                <span class="block text-xs font-light text-gray-500">(DATE: 2022)</span>
+                            </span>
+                        </li>
+                        <li class="text-gray-300 font-medium flex items-start text-sm">
+                            <span class="text-cyan-400 mr-2 font-bold">[V]</span>
+                            <span class="flex-1">
+                                Google UX Design Professional Certificate
+                                <span class="block text-xs font-light text-gray-500">(DATE: 2021)</span>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            
+        </div>
+        
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-500 text-xs">
+            <pre>
+> EOF: ACCESS LOG CLOSED
+            </pre>
+        </footer>
+
+    </div>
+
+</body>
+</html>
